@@ -4,6 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:PrettyTimer.ViewModels" 
+    x:DataType="vm:MainViewModel" 
     Title="PrettyTimer"
     d:DesignHeight="500"
     d:DesignWidth="400"
@@ -21,7 +23,7 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="64"
-            Text="00:05:00" />
+            Text="{Binding RemainingText}"/>
 
         <!--  Ligne 1 : boutons  -->
         <StackPanel
@@ -30,9 +32,9 @@
             Orientation="Horizontal"
             Spacing="30">
             
-            <Button Content="Démarrer"/>
-            <Button Content="Pause" />
-            <Button Content="Réinitialiser" />
+            <Button Content="Démarrer" Click="Start_Click"/>
+            <Button Content="Pause" Click="Pause_Click"/>
+            <Button Content="Réinitialiser" Click="Reset_Click"/>
         </StackPanel>
     </Grid>
 </Window>

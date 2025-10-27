@@ -1,0 +1,11 @@
+# Build / VS artifacts
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Avalonia / Rider / VSCode (au cas où)
+*.ide/
+.idea/
+.vscode/
